@@ -1,176 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Ozodova Kumush</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- Simple CSS + small animation styles -->
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed;
-      --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#071025);color:#e6eef8;-webkit-font-smoothing:antialiased}
-    .container{max-width:1100px;margin:0 auto;padding:32px}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color :blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
 
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:#071025}
-    h1{font-size:20px;margin:0}
-    p.lead{color:var(--muted);margin:0}
+        }
+        .container{
+            background-color: white;
+            width: 400px;
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:36px;align-items:center}
-    .hero h2{font-size:40px;margin:0 0 8px 0}
-    .hero .desc{color:var(--muted);max-width:56ch}
-    .buttons{display:flex;gap:12px;margin-top:18px}
-    .btn{padding:10px 16px;border-radius:10px;border:1px solid transparent;background:linear-gradient(90deg,#7c3aed,#06b6d4);color:#071025;font-weight:600;text-decoration:none}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
 
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid var(--glass)}
-    .banner{height:260px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#06202b, #071025);font-weight:700;color:rgba(255,255,255,0.85)}
+        }
 
-    /* Projects */
-    .projects{margin-top:36px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:16px}
-    .project{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid var(--glass-2);transition:transform .28s ease,box-shadow .28s ease}
-    .project:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(2,6,23,0.6)}
-    .project h3{margin:0 0 6px 0}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
-
-    /* Contact */
-    .contact{margin-top:42px;text-align:center}
-    .socials{display:flex;gap:14px;justify-content:center;margin-top:12px}
-    .social{width:48px;height:48px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:var(--glass);text-decoration:none;color:#eaf6ff;font-weight:700;border:1px solid rgba(255,255,255,0.03)}
-
-    footer{margin-top:48px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* Simple fade-in on load */
-    .fade-up{opacity:0;transform:translateY(18px);animation:fadeUp .7s forwards}
-    .delay-1{animation-delay:.08s}
-    .delay-2{animation-delay:.16s}
-    .delay-3{animation-delay:.24s}
-    @keyframes fadeUp{to{opacity:1;transform:none}}
-
-    /* Responsive */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}
-      .banner{height:200px}
-    }
-  </style>
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header class="fade-up delay-1">
-      <div class="brand">
-        <div class="logo">OK</div>
-        <div>
-          <h1>Ozodova Kumush</h1>
-          <p class="lead">Frontend Developer — zamonaviy UI & animatsiyalar</p>
+    <div class="container">
+        <h1>📝TO-DO List</h1>
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Write a task...">
+            <button id="addBtn">Add</button>
         </div>
-      </div>
-      <nav class="fade-up delay-2">
-        <a class="btn ghost" href="#projects">Projects</a>
-        <a class="btn ghost" href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div>
-          <h2 class="fade-up delay-2">Salom, men <span style="color:var(--accent)">Ozodova Kumush</span></h2>
-          <p class="desc fade-up delay-3">Men zamonaviy, responsiv va interaktiv web-ilovalar yarataman. Animatsiyalar orqali foydalanuvchi tajribasini yaxshilashga e'tibor qarataman. Quyida tanlangan loyihalarim mavjud.</p>
-          <div class="buttons fade-up delay-3">
-            <a href="#projects" class="btn">Loyihalarim</a>
-            <a href="#contact" class="btn ghost">Aloqa</a>
-          </div>
+        <div class="taskList">
+            
         </div>
+    </div>
+    
 
-        <aside class="card fade-up delay-2">
-          <div class="banner">Portfolio preview / screenshot</div>
-          <div style="display:flex;gap:10px;margin-top:12px;align-items:center;justify-content:space-between">
-            <div style="font-size:13px;color:var(--muted)"><strong>Role</strong><br>Frontend Developer</div>
-            <div style="text-align:right">
-              <div style="font-weight:600">Ansor Med — Calculator — To Do</div>
-              <div style="font-size:12px;color:var(--muted)">Telegram • Instagram • GitHub</div>
-            </div>
-          </div>
-        </aside>
-      </section>
 
-      <section id="projects" class="projects fade-up delay-2">
-        <h3 style="color:var(--accent);margin:0;font-size:22px">Tanlangan loyihalar</h3>
-        <p style="color:var(--muted);margin-top:6px">Ansor Med, Calculator, To Do — qisqacha tavsiflari bilan.</p>
-
-        <div class="grid">
-          <article class="project fade-up">
-            <h3>Ansor Med</h3>
-            <p class="lead" style="color:var(--muted);margin:6px 0 0 0">Sog'liqni saqlash uchun ishlab chiqilgan zamonaviy veb-ilova. Appointment, bemor kartalari va statistik modul.</p>
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">API</span>
-              <span class="tag">Responsive</span>
-            </div>
-          </article>
-
-          <article class="project fade-up delay-1">
-            <h3>Calculator</h3>
-            <p class="lead" style="color:var(--muted);margin:6px 0 0 0">Minimal, tez va qulay kalkulyator. Mobil va desktop uchun optimallashtirilgan UI.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-          </article>
-
-          <article class="project fade-up delay-2">
-            <h3>To Do</h3>
-            <p class="lead" style="color:var(--muted);margin:6px 0 0 0">Ishlar ro'yxati ilovasi — localStorage bilan offline qo'llab-quvvatlash va soddalashtirilgan UX.</p>
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">LocalStorage</span>
-              <span class="tag">UX</span>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <section id="contact" class="contact fade-up delay-3">
-        <h3 style="color:var(--accent);margin-bottom:6px">Kontakt</h3>
-        <p style="color:var(--muted);margin:0">Quyidagi kanallar orqali bog'lanishingiz mumkin — pastdagi ikonlarga bosing.</p>
-
-        <div class="socials">
-          <a class="social" href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer">Telegram</a>
-          <a class="social" href="https://instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a class="social" href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-
-        <div style="margin-top:18px">
-          <a class="btn" href="#">Resume / CV</a>
-        </div>
-      </section>
-
-      <footer>
-        © <span id="year"></span> Ozodova Kumush — All rights reserved
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // small JS to set year and add tiny entrance delays
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Add class-based stagger for project cards
-    const projects = document.querySelectorAll('.project');
-    projects.forEach((p,i)=>{p.style.animationDelay = (0.12*(i+1))+'s'});
-  </script>
+    <script src="./kumuw.js"></script>
 </body>
 </html>
